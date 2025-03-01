@@ -43,7 +43,7 @@ def analyze_job_and_score_resume(job_url, resume_content):
     """
     try:
         # Configure Gemini
-        genai.configure(api_key="AIzaSyBOygA4Dsti6gaIoPOqY45THz7UT7DeLwE")
+        genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 
         # genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
         model = genai.GenerativeModel('gemini-1.5-pro')
